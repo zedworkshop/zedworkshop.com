@@ -1,0 +1,81 @@
+/*
+	Navigation
+------------------------------------------------*/
+
+@keyframes enterNav {
+	from {
+		opacity: 0;
+		transform: translateX(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.sitenav {
+	display: none;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		display: block;
+		margin: 0;
+		padding: $gutter/2 $base-spacing/2;
+	}
+
+	@include media($small-screen-up) {
+		display: inline-block;
+		margin-left: $gutter;
+
+		li {
+			display: inline-block;
+		}
+
+		.hero-container & {
+
+			background: #fff;
+			display: block;
+			padding: $base-spacing / 2;
+			margin-left: 0;
+			width: 120px;
+
+			position: absolute;
+			top: 40%;
+			left: 0;
+			z-index: 2;
+
+			li {
+				display: block;
+			}
+		}
+	}
+
+	@include media($large-screen-up) {
+
+		.hero-container & {
+			background: transparent;
+
+			top: 50%;
+			bottom: auto;
+
+			animation-name: enterNav;
+			animation-duration: 1000ms;
+			animation-delay: 1000ms;
+			animation-fill-mode: both;
+
+			a {
+				@include font-size(15);
+			}
+		}
+
+	}
+}

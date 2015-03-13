@@ -1,0 +1,33 @@
+Title: DECO Windshield Repair
+
+----
+
+Year: 2015
+
+----
+
+Tags: mobile app,website
+
+----
+
+Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+
+----
+
+Summary: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+
+----
+
+Quote: Customers love our website and apps because of how much they help them find the closest DECO locations to them. This reduces our call centre traffic, and increases our on-site customer visits.
+
+----
+
+Quoteauthor: Matt Horne, CEO of DECO Windshield Repair
+
+----
+
+Projectcode: deco
+
+----
+
+Website: http://decorepair.com

@@ -1,0 +1,17 @@
+Title: Zed Workshop
+
+----
+
+Author: Adam Campbell
+
+----
+
+Description: Zed Workshop designs and builds custom digital things for startups and established businesses.
+
+----
+
+Keywords: 
+
+----
+
+Copyright: © (date: Year) (link: http://zedworkshop.com text: Zed Workshop)

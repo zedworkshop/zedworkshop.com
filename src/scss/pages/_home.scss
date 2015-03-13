@@ -1,0 +1,214 @@
+/*
+	Home page
+------------------------------------------------*/
+
+.hero {
+	background: url(../images/splash-1.jpg) no-repeat left bottom;
+	background-size: cover;
+	height: 0;
+	padding-top: 55%;
+	padding-bottom: 40%;
+
+	&-credit {
+		position: absolute;
+		bottom: 1em;
+		left: 2em;
+
+		color: transparentize(#fff, .5);
+		margin: 0;
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+
+	@include media($small-screen-up) {
+		padding-top: 0;
+		padding-bottom: 50%;
+
+		&-title {
+			position: absolute;
+			top: 0;
+			// right: 2.5%;
+			left: 25%;
+
+			width: 50%;
+			@include pad(flex-gutter() * 2.5 flex-gutter() * 2);
+
+			p {
+				line-height: 1.43;
+			}
+		}
+
+		&-credit {
+			bottom: 2em;
+			right: 2em;
+			left: auto;
+		}
+	}
+
+	@include media($small-screen-up) {
+
+		&-title {
+
+			p {
+				font-size: 2.4vw;
+			}
+		}
+	}
+
+	@include media($large-screen-up) {
+		padding-bottom: 40%;
+
+		&-title {
+			left: 7.5%;
+			top: $base-spacing * 2;
+			max-width: 30em;
+			max-width: 30vw;
+
+			p {
+				font-size: 1.4vw;
+			}
+		}
+
+
+	}
+}
+
+/* Rows ------------------------------- */
+
+.home-intro {
+
+	margin-bottom: 5%;
+
+	&__a {
+
+	}
+
+	&__b {
+		background: $grey-lighter;
+		padding-top: $base-spacing;
+		padding-bottom: $base-spacing;
+	}
+
+	@include media($small-screen-up) {
+
+		&__a {
+			h1 {
+				margin-bottom: 0;
+			}
+		}
+
+		&__b {
+			background: transparent;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+	}
+
+	@include media($xlarge-screen-up) {
+
+		&__a {
+			h1 {
+				font-size: 2.2vw;
+				margin-bottom: 0;
+				padding-right: 15%;
+				max-width: none;
+			}
+		}
+
+	}
+
+}
+
+
+.home-work {
+
+	$mask-dim: 250px;
+
+	// .csstransforms3d & {
+
+		figure {
+			overflow: hidden;
+			position: relative;
+
+			opacity: 0;
+			transform: scale(0.9);
+
+			transition-property: opacity, transform;
+			transition-duration: 1000ms;
+			transition-delay: 200ms;
+			transition-timing-function: $ease-in-out-quart;
+
+			img {
+				display: block;
+				position: relative;
+				z-index: 1;
+			}
+
+			// &:after {
+			// 	content: '';
+
+			// 	display: block;
+			// 	height: $mask-dim * 2;
+			// 	width: $mask-dim * 2;
+
+			// 	border: $mask-dim solid $base-background-color;
+			// 	border-radius: $mask-dim;
+
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	left: 50%;
+			// 	z-index: 2;
+
+			// 	pointer-events: none;
+			// 	transform: translate3d(-50%, -50%, 0);
+
+			// 	transition-property: border-width;
+			// 	transition-duration: 700ms;
+			// 	transition-timing-function: $ease-in-out-quart;
+			// }
+
+		}
+
+		.content {
+			opacity: 0;
+			transform: translateX(-10%);
+
+			transition-property: opacity, transform;
+			transition-duration: 1000ms;
+			transition-delay: 500ms;
+			transition-timing-function: $ease-in-out-quart;
+		}
+
+		.omega-sm {
+			.content {
+				transform: translateX(10%);
+			}
+		}
+
+	// }
+
+	.row.visible {
+
+		figure {
+
+			opacity: 1;
+			transform: scale(1);
+
+			// &:after {
+			// 	border-width: 0;
+			// }
+		}
+
+		.content {
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+	}
+
+}
+

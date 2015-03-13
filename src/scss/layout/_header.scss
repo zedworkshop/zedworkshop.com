@@ -1,0 +1,57 @@
+/*
+	Header
+------------------------------------------------*/
+
+$sitebrand-bg: $brand-primary;
+
+.sitebrand {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 50px;
+
+	.hero-container & {
+
+		display: block;
+		max-width: 50%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+
+		background: $sitebrand-bg;
+		border-radius: 2px;
+
+		padding: 5em 3.5em;
+		box-shadow: rgba(#000, 0.1) 0 1px 1px;
+
+		transition-property: width, padding, box-shadow;
+		transition-duration: 150ms, 150ms, 300ms;
+		transition-timing-function: ease-in-out, ease-in-out, $ease-in-out-quart;
+
+		&:hover {
+			box-shadow: rgba(#000, 0.25) 0 10px 20px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+
+			transition-property: width;
+			transition-duration: 150ms;
+		}
+
+		@include media($small-screen-up) {
+			max-width: 25%;
+			@include pad(flex-gutter() * 3.5 flex-gutter() * 2.5);
+		}
+
+		@include media($large-screen-up) {
+			max-width: 16.6%;
+			margin-top: $base-spacing * 2;
+			@include pad(flex-gutter() * 2.75 flex-gutter() * 1.75);
+		}
+
+	}
+
+}
