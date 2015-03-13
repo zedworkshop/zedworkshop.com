@@ -1,4 +1,4 @@
-<?php snippet('head') ?>
+<?php snippet( 'head') ?>
 
 <header class="container-full [ u-padR0 u-padB0 u-pr mb1 ] hero-container" role="banner">
 
@@ -66,16 +66,17 @@
     <div class="[ row ] home-work">
         <div class="col-xs-12">
 
-            <h2 class="align-center mb2">Our Work</h2>
+            <h2 class="align-center mb2">Selected Work</h2>
 
-            <div class="row">
+
+            <div class="[ row top-xs ]">
 
                 <?php snippet( 'projects') ?>
 
             </div>
 
             <p class="align-center mt1 mb0">
-                <a href="<?php echo $site->page('projects')->url() ?>" class="btn btn-dark">View more projects</a>
+                <a href="<?php echo $site->page('projects')->url() ?>" class="btn btn-dark">View more work</a>
             </p>
 
         </div>
@@ -96,7 +97,7 @@
                 <h3 class="h2">Who We Are</h3>
             </div>
 
-            <p class="large">Zed Workshop is a small, hard-working studio based in Huntsville, Alabama, but serving clients all over the world.</p>
+            <p class="large">Zed Workshop is a small, hard-working studio based in Huntsville, Alabama that serves clients all over the world.</p>
 
             <p class="mb0"><a href="<?php echo $site->page('contact')->url() ?>" class="btn btn-sm">Say hello</a>
             </p>
@@ -104,36 +105,23 @@
             <hr class="mini" />
 
             <blockquote>
-                <p class="huge mb05 text-alt"><?php echo $page->quote()->html() ?></p>
-                <p class="mb0 small font-bold text-mid"><?php echo $page->quoteAuthor()->html() ?></p>
+                <p class="huge mb05 text-alt">
+                    <?php echo $page->quote()->html() ?></p>
+                <p class="mb0 small font-bold text-mid">
+                    <?php echo $page->quoteAuthor()->html() ?></p>
             </blockquote>
 
-            <hr class="mini" />
+            <div class="[ row middle-xs ] [ align-center u-cushionTop-sm ] home-clients">
 
-            <div class="[ row align-center middle-xs ] home-clients">
-                <div class="[ col-xs-6 col-md-2 ]">
-                    logo
+                <?php foreach($page->images() as $image): ?>
+
+                <div class="[ col-xs-4 col-md ] mb2">
+                    <figure>
+                        <img alt="" src="<?php echo $image->url() ?>" />
+                    </figure>
                 </div>
 
-                <div class="[ col-xs-6 col-md-2 ]">
-                    logo
-                </div>
-
-                <div class="[ col-xs-6 col-md-2 ]">
-                    logo
-                </div>
-
-                <div class="[ col-xs-6 col-md-2 ]">
-                    logo
-                </div>
-
-                <div class="[ col-xs-6 col-md-2 ]">
-                    logo
-                </div>
-
-                <div class="[ col-xs-6 col-md-2 ]">
-                    logo
-                </div>
+                <?php endforeach ?>
 
             </div>
 
@@ -142,4 +130,4 @@
 
 </div>
 
-<?php snippet('footer') ?>
+<?php snippet( 'footer') ?>

@@ -12,18 +12,14 @@
 
             <?php echo $page->text()->kirbytext() ?>
 
-            <hr />
         </div>
     </div>
-</main>
 
-
-<div class="container-full">
-    <div class="row">
+    <div class="[ row top-xs ] u-cushionTop">
 
         <?php snippet( 'projects') ?>
 
     </div>
-</div>
+</main>
 
 <?php snippet( 'footer') ?>

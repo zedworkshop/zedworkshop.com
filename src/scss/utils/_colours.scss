@@ -24,7 +24,7 @@ $grey-subtle: lighten($grey, 57);
 $grey-tint: darken($grey-subtle, 3);
 $grey-lightest: darken($grey-tint, 3);
 $grey-lighter: lighten($grey, 47);
-$grey-light: lighten($grey, 35);
+$grey-light: #d7d7d7;
 $grey-mid: lighten($grey, 15);
 $grey: $grey;
 $grey-dark: darken($grey, 15);

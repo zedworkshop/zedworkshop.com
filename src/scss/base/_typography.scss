@@ -53,6 +53,10 @@ h1,
 .h1 {
     @include font-size($h1-font-size);
     line-height: 1.1;
+
+    &.page-title {
+        @include font-size($h1-font-size * 1.5);
+    }
 }
 
 h2,
@@ -218,7 +222,7 @@ cite {
 
 @include media($small-screen-up) {
     p {
-        @include font-size($p-font-size);
+        @include font-size($p-font-size * 1.1);
     }
 }
 
@@ -276,6 +280,14 @@ small,
 }
 
 @include media($medium-screen-up) {
+
+    %small {
+        @include font-size(14);
+    }
+
+    .small {
+        @extend %small;
+    }
 
     .huge {
         @include font-size(32);

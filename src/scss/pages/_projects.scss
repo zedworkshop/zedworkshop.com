@@ -1,11 +1,73 @@
+/* Browser ------------------- */
+
+.browser {
+	$browser-radius: $base-border-radius * 3;
+	$browser-button-dim: 8px;
+
+	background: $grey-lightest;
+	border-radius: $browser-radius $browser-radius 0 0;
+	box-shadow: rgba(#000, 0.2) 0 20px 30px;
+
+	&-header {
+		border-bottom: 1px solid $grey-light;
+		display: block;
+		padding: $base-spacing/2 $gutter/2;
+		text-align: left;
+	}
+
+	&-button {
+		display: inline-block;
+		height: $browser-button-dim;
+		width: $browser-button-dim;
+		border-radius: 50%;
+		margin-right: 0.2em;
+
+		&--green {
+			background: $green;
+		}
+
+		&--yellow {
+			background: lighten($yellow, 10);
+		}
+
+		&--red {
+			background: $red;
+		}
+	}
+
+	@include media($medium-screen-up) {
+
+		&-header {
+			padding: $base-spacing $gutter;
+		}
+
+	}
+}
+
+
+
+/* Customer Colors ------------------- */
+
 .bg-customer-deco {
 	background-color: #e96223;
+}
+
+.text-customer-deco {
+	color: #e96223;
 }
 
 .bg-customer-otbx {
 	background-color: #262626;
 }
 
+.text-customer-otbx {
+	color: #262626;
+}
+
 .bg-customer-butler {
-	background-color: #c80815;
+	background-color: #103165;
+}
+
+.text-customer-butler {
+	color: #103165;
 }
